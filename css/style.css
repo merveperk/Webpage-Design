@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-color);
+    cursor: pointer;
+}
+h2, p{
+    margin-bottom: 10px;
+}
+img{
+        width: 100%;
+}
+footer{
+    height: 140px;
+}
+/*navbar*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 70px;
+    opacity: 0.8;
+
+}
+
+.logo{
+    margin-left: 20px;
+}
+.title{
+    font-size: 30px;
+}
+
+
+.navbar ul {
+
+    display: flex;
+}
+
+.navbar a {
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* header */
+.hero {
+    height: 100vh;
+    background: url(../images/home/showcase.jpg) no-repeat center center/cover;
+    position: relative;
+    color: var(--light-color);
+    width: 100%;
+}
+.hero .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+.hero::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hero *{
+    z-index: 10;
+}
+
+/* flex-items */
+.icons{
+    padding: 30px;
+}
+.icons i{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 4.5rem;
+    height: 4rem;
+}
+.icons h2{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer a{
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* media queries */
+@media(max-width:770px){
+    body{
+        min-width: 500px;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-evenly;
+
+    }
+    .flex-columns .column,
+    .flex-grid .column{
+        flex:100%;
+        max-width: 100%;
+    }
+    .flex-grid .column{
+        height: 100%;
+    }
+    .flex-items{
+        flex-direction: column;
+    }
+    }
+
+
